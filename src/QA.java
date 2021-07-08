@@ -19,7 +19,7 @@ public class QA {
         p.three("A more stable distro will very rarely break or have issues, while a less stable distro may occasionally bring up a few problems.");
 
         p.three("A: For a regular user. A good amount of software that is considered stable but still fairly up-to-date. (Ubuntu repos)");
-        p.three("B: For the user who can't get enough: Tons of software that is very up-to-date, but may be ss stable. (Arch repos)");
+        p.three("B: For the user who can't get enough: Tons of software that is very up-to-date, but may be less stable. (Arch repos)");
         p.three("C: For the user who likes to try innovation but stay stable. Less software, but more up to date and with rock solid stability. (Fedora repos)");
         p.three("D: I hate updates! I don't care if my software is a while out of date, just keep it stable. (Debian repos)");
         p.three("E: Extreme stability (For enterprise or servers). Software will be years out of date, but stability is 99.9% ensured. (Red hat/cent os repos)");
