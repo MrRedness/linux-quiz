@@ -26,4 +26,13 @@ public class QA {
         Scanner scanner = new Scanner(System.in);
         return scanner.next().charAt(0);
     }
+    public static char UI() {
+        p.three("Thank you! The next thing I need to know is: how do you want your distro to look?");
+        p.three("A: I already know what Desktop Environment I like (Gnome, KDE, XFCE, etc.)");
+        p.three("B: I don't know what a Desktop Environment is, but I liked the way my previous distro looked and want it to remain the same.");
+        p.three("C: I didn't like my previous distro. I'd like a new look/feel.");
+        p.three("D: I'm just starting out, I really have no clue what you are talking about. Just switching to linux)");
+        Scanner scanner = new Scanner(System.in);
+        return scanner.next().charAt(0);
+    }
 }
