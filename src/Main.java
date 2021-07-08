@@ -6,6 +6,8 @@ public class Main {
 	System.out.println("Welcome to the Linux Quiz");
 	System.out.println("I will be guiding you through finding a linux distribution for your needs.");
 	userChoices.add(QA.experience());
+	userChoices.add(QA.packages());
+	System.out.println(userChoices);
 
     }
 }
