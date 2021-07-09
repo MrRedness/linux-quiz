@@ -6,7 +6,7 @@ public class QA {
         p.three("A: Just switching from Windows/Mac.");
         p.three("B: I've nibbled at it a few times, but nothing too deep");
         p.three("C: I've been using linux for a few weeks/months and I want to try a different distro.");
-        p.three("D: I consider myself a linux intermediate/expert but need to find another distro.");
+        p.t("D: I consider myself a linux intermediate/expert but need to find another distro.");
         Scanner scanner = new Scanner(System.in);
         return scanner.next().charAt(0);
 
@@ -22,7 +22,7 @@ public class QA {
         p.three("B: For the user who can't get enough: Tons of software that is very up-to-date, but may be less stable. (Arch repos)");
         p.three("C: For the user who likes to try innovation but stay stable. Less software, but more up to date and with rock solid stability. (Fedora repos)");
         p.three("D: I hate updates! I don't care if my software is a while out of date, just keep it stable. (Debian repos)");
-        p.three("E: Extreme stability (For enterprise or servers). Software will be years out of date, but stability is 99.9% ensured. (Red hat/cent os repos)");
+        p.t("E: Extreme stability (For enterprise or servers). Software will be years out of date, but stability is 99.9% ensured. (Red hat/cent os repos)");
         Scanner scanner = new Scanner(System.in);
         return scanner.next().charAt(0);
     }
@@ -31,7 +31,7 @@ public class QA {
         p.three("A: I already know what Desktop Environment I like (Gnome, KDE, XFCE, etc.)");
         p.three("B: I don't know what a Desktop Environment is, but I liked the way my previous distro looked and want it to remain the same.");
         p.three("C: I didn't like my previous distro. I'd like a new look/feel.");
-        p.three("D: I'm just starting out, I really have no clue what you are talking about. Just switching to linux)");
+        p.t("D: I'm just starting out, I really have no clue what you are talking about.");
         Scanner scanner = new Scanner(System.in);
         return scanner.next().charAt(0);
     }
