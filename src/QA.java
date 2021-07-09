@@ -2,10 +2,10 @@ import java.util.Scanner;
 
 public class QA {
     public static char experience() {
-        p.three("First question: How much linux experience do you have?");
-        p.three("A: Just switching from Windows/Mac.");
-        p.three("B: I've nibbled at it a few times, but nothing too deep");
-        p.three("C: I've been using linux for a few weeks/months and I want to try a different distro.");
+        p.two("First question: How much linux experience do you have?");
+        p.two("A: Just switching from Windows/Mac.");
+        p.two("B: I've nibbled at it a few times, but nothing too deep");
+        p.two("C: I've been using linux for a few weeks/months and I want to try a different distro.");
         p.t("D: I consider myself a linux intermediate/expert but need to find another distro.");
         Scanner scanner = new Scanner(System.in);
         return scanner.next().charAt(0);
@@ -14,7 +14,8 @@ public class QA {
     public static char packages() {
         p.three("Ok. Next question: What type of package system do you prefer?");
         p.three("(Packages are compiled software that can be installed on linux systems (the equivalent of a .exe on windows).");
-        p.three("Linux distros use 'package managers' to help install and keep up to date your software.");
+        p.three("Linux distros use 'package managers' to help install and keep your software up to date.");
+        p.three("Typically, there will be a tradeoff between amount of software / how up-to-date the software is, versus stability.");
         p.three("In this case, stability refers to the likelihood of packages having issues");
         p.three("A more stable distro will very rarely break or have issues, while a less stable distro may occasionally bring up a few problems.");
 
@@ -27,10 +28,10 @@ public class QA {
         return scanner.next().charAt(0);
     }
     public static char UI() {
-        p.three("Thank you! The next thing I need to know is: how do you want your distro to look?");
-        p.three("A: I already know what Desktop Environment I like (Gnome, KDE, XFCE, etc.)");
-        p.three("B: I don't know what a Desktop Environment is, but I liked the way my previous distro looked and want it to remain the same.");
-        p.three("C: I didn't like my previous distro. I'd like a new look/feel.");
+        p.two("Thank you! How do you want your distro to look?");
+        p.two("A: I already know what Desktop Environment I like (Gnome, KDE, XFCE, etc.)");
+        p.two("B: I don't know what a Desktop Environment is, but I liked the way my previous distro looked and want it to remain the same.");
+        p.two("C: I didn't like my previous distro. I'd like a new look/feel.");
         p.t("D: I'm just starting out, I really have no clue what you are talking about.");
         Scanner scanner = new Scanner(System.in);
         return scanner.next().charAt(0);
