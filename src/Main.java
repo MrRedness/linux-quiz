@@ -29,7 +29,6 @@ public class Main {
 		}
 		userChoices.add(packages);
 
-		System.out.println(userChoices); // just for debug rn
 
 		char UI = QA.UI();
 		if (!((UI == 'A')| (UI == 'B') | (UI == 'C') | (UI == 'D'))) {
