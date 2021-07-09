@@ -86,7 +86,7 @@ public class Main {
 			//				p.t(desktopExperience);
 			//				scannerDesktopExperience.close();
 							if (desktopExperience.equals("Windows")) {
-								p.t("Ok, now we need to see what your priorities are.");
+								p.t("Ok, now let's figure out your priorities.");
 								p.t("Is your number 1 priority: performance, looks, or customization?");
 								Scanner scannerPriority1 = new Scanner(System.in);
 								String priority1 = scannerPriority1.nextLine();
@@ -103,10 +103,12 @@ public class Main {
 										switch (priority2.toUpperCase()) {
 											case "LOOKS": {
 												p.t("Performance, then Looks");
+												// LXQt
 												break;
 											}
 											case "CUSTOMIZATION": {
 												p.t("Performance, then Customization");
+												// XFCE
 												break;
 											}
 										}
@@ -120,6 +122,7 @@ public class Main {
 										switch (priority2.toUpperCase()) {
 											case "PERFORMANCE": {
 												p.t("Looks, then Performance");
+
 												break;
 											}
 											case "CUSTOMIZATION": {
