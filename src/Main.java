@@ -86,74 +86,114 @@ public class Main {
 			//				p.t(desktopExperience);
 			//				scannerDesktopExperience.close();
 							if (desktopExperience.equals("Windows")) {
-								p.t("Ok, now let's figure out your priorities.");
-								p.t("Is your number 1 priority: performance, looks, or customization?");
-								Scanner scannerPriority1 = new Scanner(System.in);
-								String priority1 = scannerPriority1.nextLine();
-			//					p.t(priority1);
-			//					scannerPriority1.close();
+								p.t("Would you like me to just recommend you a windows-like distro, or would you prefer to find a DE suited to your needs.");
+								p.t("Answer with yes for recommendation, or no for a DE selection guide.");
+								Scanner scannerRecommendation = new Scanner(System.in);
+								String recommendation = scannerRecommendation.nextLine();
+								boolean booleanRecommendation = booleanize.normal(recommendation);
+								if (booleanRecommendation) {
+									userChoices.add("Windows");
+								} else {
 
 
-								switch (priority1.toUpperCase()) {
-									case "PERFORMANCE": {
-										p.t("Is your number 2 priority: looks, or customization?");
-										Scanner scannerPriority2 = new Scanner(System.in);
-										String priority2 = scannerPriority2.nextLine();
-			//							scannerPriority2.close();
-										switch (priority2.toUpperCase()) {
-											case "LOOKS": {
-												p.t("Performance, then Looks");
-												// LXQt
-												break;
-											}
-											case "CUSTOMIZATION": {
-												p.t("Performance, then Customization");
-												// XFCE
-												break;
-											}
-										}
-										break;
-									}
-									case "LOOKS": {
-										p.t("Is your number 2 priority: performance, or customization?");
-										Scanner scannerPriority2 = new Scanner(System.in);
-										String priority2 = scannerPriority2.nextLine();
-				//						scannerPriority2.close();
-										switch (priority2.toUpperCase()) {
-											case "PERFORMANCE": {
-												p.t("Looks, then Performance");
+									p.t("Ok, now let's figure out your priorities.");
+									p.t("Is your number 1 priority: performance, looks, or customization?");
+									Scanner scannerPriority1 = new Scanner(System.in);
+									String priority1 = scannerPriority1.nextLine();
+									//					p.t(priority1);
+									//					scannerPriority1.close();
 
-												break;
+
+									switch (priority1.toUpperCase()) {
+										case "PERFORMANCE": {
+											p.t("Is your number 2 priority: looks, or customization?");
+											Scanner scannerPriority2 = new Scanner(System.in);
+											String priority2 = scannerPriority2.nextLine();
+											//							scannerPriority2.close();
+											switch (priority2.toUpperCase()) {
+												case "LOOKS": {
+													p.t("Performance, then Looks");
+													p.t("I'd recommend LXQt, a lightweight but relatively good looking Desktop Environment.");
+													p.t("If this is ok, answer with yes.");
+													p.t("If not, answer no.");
+													Scanner scannerSelectDE = new Scanner(System.in);
+													String selectDE = scannerSelectDE.nextLine();
+													if (selectDE.equalsIgnoreCase("yes")) {
+														userChoices.add("LXQt");
+													} else if (selectDE.equalsIgnoreCase("no")) {
+														p.t("Ok, some alternatives are: XFCE, Mate, or Cinnamon.");
+														p.t("If you don't like these, just answer with the DE of your choice.");
+														String selectDE2 = scannerSelectDE.nextLine();
+														userChoices.add(selectDE2);
+													}
+													// LXQt
+													break;
+												}
+												case "CUSTOMIZATION": {
+													p.t("Performance, then Customization");
+													p.t("I'd recommend XFCE, a lightweight but relatively good looking Desktop Environment loaded with customization features.");
+													p.t("If this is ok, answer with yes.");
+													p.t("If not, answer no.");
+													Scanner scannerSelectDE = new Scanner(System.in);
+													String selectDE = scannerSelectDE.nextLine();
+													if (selectDE.equalsIgnoreCase("yes")) {
+														userChoices.add("LXQt");
+													} else if (selectDE.equalsIgnoreCase("no")) {
+														p.t("Ok, some alternatives are: XFCE, Mate, or Cinnamon.");
+														p.t("If you don't like these, just answer with the DE of your choice.");
+														String selectDE2 = scannerSelectDE.nextLine();
+														userChoices.add(selectDE2);
+													}
+													// XFCE
+													break;
+												}
 											}
-											case "CUSTOMIZATION": {
-												p.t("Looks, then Customization");
-												break;
-											}
+											break;
 										}
-										break;
-									}
-									case "CUSTOMIZATION": {
-										p.t("Is your number 2 priority: performance, or looks?");
-										Scanner scannerPriority2 = new Scanner(System.in);
-										String priority2 = scannerPriority2.nextLine();
-				//						scannerPriority2.close();
-										switch (priority2.toUpperCase()) {
-											case "PERFORMANCE": {
-												p.t("Customization, then Performance");
-												break;
+										case "LOOKS": {
+											p.t("Is your number 2 priority: performance, or customization?");
+											Scanner scannerPriority2 = new Scanner(System.in);
+											String priority2 = scannerPriority2.nextLine();
+											//						scannerPriority2.close();
+											switch (priority2.toUpperCase()) {
+												case "PERFORMANCE": {
+													p.t("Looks, then Performance");
+													// Cinnamon
+													break;
+												}
+												case "CUSTOMIZATION": {
+													p.t("Looks, then Customization");
+													// KDE
+													break;
+												}
 											}
-											case "LOOKS": {
-												p.t("Customization, then Looks");
-												break;
-											}
+											break;
 										}
-										break;
+										case "CUSTOMIZATION": {
+											p.t("Is your number 2 priority: performance, or looks?");
+											Scanner scannerPriority2 = new Scanner(System.in);
+											String priority2 = scannerPriority2.nextLine();
+											//						scannerPriority2.close();
+											switch (priority2.toUpperCase()) {
+												case "PERFORMANCE": {
+													p.t("Customization, then Performance");
+													// XFCE
+													break;
+												}
+												case "LOOKS": {
+													p.t("Customization, then Looks");
+													// KDE
+													break;
+												}
+											}
+											break;
+										}
+
 									}
 
 								}
-
 							}
-
+							//mac like
 						} else {
 							p.t("Invalid answer... Use yes or no.");
 						}
