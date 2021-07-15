@@ -137,9 +137,9 @@ public class Main {
 													Scanner scannerSelectDE = new Scanner(System.in);
 													String selectDE = scannerSelectDE.nextLine();
 													if (selectDE.equalsIgnoreCase("yes")) {
-														userChoices.add("LXQt");
+														userChoices.add("XFCE");
 													} else if (selectDE.equalsIgnoreCase("no")) {
-														p.t("Ok, some alternatives are: XFCE, Mate, or Cinnamon.");
+														p.t("Ok, some alternatives are: KDE, Mate, or Cinnamon.");
 														p.t("If you don't like these, just answer with the DE of your choice.");
 														String selectDE2 = scannerSelectDE.nextLine();
 														userChoices.add(selectDE2);
@@ -158,11 +158,36 @@ public class Main {
 											switch (priority2.toUpperCase()) {
 												case "PERFORMANCE": {
 													p.t("Looks, then Performance");
-													// Cinnamon
+                                                    p.t("I'd recommend Cinnamon, a very windows-like OS with decent performance and some customization features..");
+                                                    p.t("If this is ok, answer with yes.");
+                                                    p.t("If not, answer no.");
+                                                    Scanner scannerSelectDE = new Scanner(System.in);
+                                                    String selectDE = scannerSelectDE.nextLine();
+                                                    if (selectDE.equalsIgnoreCase("yes")) {
+                                                        userChoices.add("Cinnamon");
+                                                    } else if (selectDE.equalsIgnoreCase("no")) {
+                                                        p.t("Ok, some alternatives are: XFCE, Mate, or KDE.");
+                                                        p.t("If you don't like these, just answer with the DE of your choice.");
+                                                        String selectDE2 = scannerSelectDE.nextLine();
+                                                        userChoices.add(selectDE2);
+                                                    }
 													break;
 												}
 												case "CUSTOMIZATION": {
 													p.t("Looks, then Customization");
+                                                    p.t("I'd recommend KDE, a DE that comes very good looking (windows-like) but loaded with customization features.");
+                                                    p.t("If this is ok, answer with yes.");
+                                                    p.t("If not, answer no.");
+                                                    Scanner scannerSelectDE = new Scanner(System.in);
+                                                    String selectDE = scannerSelectDE.nextLine();
+                                                    if (selectDE.equalsIgnoreCase("yes")) {
+                                                        userChoices.add("KDE");
+                                                    } else if (selectDE.equalsIgnoreCase("no")) {
+                                                        p.t("Ok, some alternatives are: XFCE, Mate, or Cinnamon.");
+                                                        p.t("If you don't like these, just answer with the DE of your choice.");
+                                                        String selectDE2 = scannerSelectDE.nextLine();
+                                                        userChoices.add(selectDE2);
+                                                    }
 													// KDE
 													break;
 												}
@@ -176,12 +201,39 @@ public class Main {
 											//						scannerPriority2.close();
 											switch (priority2.toUpperCase()) {
 												case "PERFORMANCE": {
-													p.t("Customization, then Performance");
-													// XFCE
-													break;
-												}
+                                                    p.t("Customization, then Performance");
+                                                    p.t("I'd recommend XFCE, a lightweight but relatively good looking Desktop Environment loaded with customization features.");
+                                                    p.t("If this is ok, answer with yes.");
+                                                    p.t("If not, answer no.");
+                                                    Scanner scannerSelectDE = new Scanner(System.in);
+                                                    String selectDE = scannerSelectDE.nextLine();
+                                                    if (selectDE.equalsIgnoreCase("yes")) {
+                                                        userChoices.add("XFCE");
+                                                    } else if (selectDE.equalsIgnoreCase("no")) {
+                                                        p.t("Ok, some alternatives are: KDE, Mate, or Cinnamon.");
+                                                        p.t("If you don't like these, just answer with the DE of your choice.");
+                                                        String selectDE2 = scannerSelectDE.nextLine();
+                                                        userChoices.add(selectDE2);
+                                                    }
+                                                        // XFCE
+                                                        break;
+                                                    }
+
 												case "LOOKS": {
 													p.t("Customization, then Looks");
+                                                    p.t("I'd recommend KDE, a DE that comes very good looking (windows-like) but loaded with customization features.");
+                                                    p.t("If this is ok, answer with yes.");
+                                                    p.t("If not, answer no.");
+                                                    Scanner scannerSelectDE = new Scanner(System.in);
+                                                    String selectDE = scannerSelectDE.nextLine();
+                                                    if (selectDE.equalsIgnoreCase("yes")) {
+                                                        userChoices.add("KDE");
+                                                    } else if (selectDE.equalsIgnoreCase("no")) {
+                                                        p.t("Ok, some alternatives are: XFCE, Mate, or Cinnamon.");
+                                                        p.t("If you don't like these, just answer with the DE of your choice.");
+                                                        String selectDE2 = scannerSelectDE.nextLine();
+                                                        userChoices.add(selectDE2);
+                                                    }
 													// KDE
 													break;
 												}
@@ -200,7 +252,7 @@ public class Main {
 					break;
 				}
 				case 'C': {
-					// Will look very similar to C
+					// Will look very similar to the windows-like switch in B
 					p.t("");
 					p.t("");
 					break;
