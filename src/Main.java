@@ -3,7 +3,7 @@ import java.util.Scanner;
 
 
 public class Main {
-    public static void main(String[] args)  {
+    public static integer main(String[] args)  {
 	ArrayList<Object> userChoices = new ArrayList<>(); // here I store the answers from the user
 	System.out.println("Welcome to the Linux Quiz!");
 	sleep.sec(2); // a sleep method is setup for easier syntax (sleep.java)
