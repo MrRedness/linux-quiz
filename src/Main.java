@@ -252,6 +252,7 @@ public class Main {
 				// Will look very similar to the windows-like switch in B
 				p.t("");
 				p.t("");
+				p.t("");
 
 			}
 			case 'D' -> {
